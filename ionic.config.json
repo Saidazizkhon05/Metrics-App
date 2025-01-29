@@ -1,0 +1,7 @@
+{
+  "name": "MetricsApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
