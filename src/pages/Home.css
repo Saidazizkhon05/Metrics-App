@@ -1,0 +1,30 @@
+.ion-content-container {
+    --background: white;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+}
+
+ion-button {
+    width: 300px;
+    height: 40px;
+    --box-shadow: none;
+    text-transform: uppercase;
+}
+
+.custom-input {
+    width: 300px;
+    height: 40px;
+    --padding-start: 10px;
+    --padding-end: 10px;
+    --background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 0;
+}

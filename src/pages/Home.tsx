@@ -1,22 +1,30 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { IonContent, IonPage, IonButton, IonInput } from '@ionic/react';
 import './Home.css';
+import {Metrics} from '@innerworks-me/iw-mobile-auth';
 
 const Home: React.FC = () => {
+  
+
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Blank</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer />
+      <IonContent className="ion-content-container" fullscreen>
+        <div className="button-container">
+          <IonInput
+            type="text"
+            placeholder="Enter text"
+            className="custom-input"
+            clearInput
+          />
+          <IonButton
+            onClick={() => {
+              try {
+                Metrics.sendCollectedData("Button Clicked");
+              } catch (error) {
+                console.error('Button click error:', error)
+              }
+            }}
+          >Click</IonButton>
+        </div>
       </IonContent>
     </IonPage>
   );
